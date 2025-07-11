@@ -1,27 +1,27 @@
 .. These are examples of badges you might want to add to your README:
    please update the URLs accordingly
 
-    .. image:: https://api.cirrus-ci.com/github/<USER>/python-sdk.svg?branch=main
+    .. image:: https://api.cirrus-ci.com/github/<USER>/agentflare-sdk.svg?branch=main
         :alt: Built Status
-        :target: https://cirrus-ci.com/github/<USER>/python-sdk
-    .. image:: https://readthedocs.org/projects/python-sdk/badge/?version=latest
+        :target: https://cirrus-ci.com/github/<USER>/agentflare-sdk
+    .. image:: https://readthedocs.org/projects/agentflare-sdk/badge/?version=latest
         :alt: ReadTheDocs
-        :target: https://python-sdk.readthedocs.io/en/stable/
-    .. image:: https://img.shields.io/coveralls/github/<USER>/python-sdk/main.svg
+        :target: https://agentflare-sdk.readthedocs.io/en/stable/
+    .. image:: https://img.shields.io/coveralls/github/<USER>/agentflare-sdk/main.svg
         :alt: Coveralls
-        :target: https://coveralls.io/r/<USER>/python-sdk
-    .. image:: https://img.shields.io/pypi/v/python-sdk.svg
+        :target: https://coveralls.io/r/<USER>/agentflare-sdk
+    .. image:: https://img.shields.io/pypi/v/agentflare-sdk.svg
         :alt: PyPI-Server
-        :target: https://pypi.org/project/python-sdk/
-    .. image:: https://img.shields.io/conda/vn/conda-forge/python-sdk.svg
+        :target: https://pypi.org/project/agentflare-sdk/
+    .. image:: https://img.shields.io/conda/vn/conda-forge/agentflare-sdk.svg
         :alt: Conda-Forge
-        :target: https://anaconda.org/conda-forge/python-sdk
-    .. image:: https://pepy.tech/badge/python-sdk/month
+        :target: https://anaconda.org/conda-forge/agentflare-sdk
+    .. image:: https://pepy.tech/badge/agentflare-sdk/month
         :alt: Monthly Downloads
-        :target: https://pepy.tech/project/python-sdk
+        :target: https://pepy.tech/project/agentflare-sdk
     .. image:: https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Twitter
         :alt: Twitter
-        :target: https://twitter.com/python-sdk
+        :target: https://twitter.com/agentflare-sdk
 
 .. image:: https://img.shields.io/badge/-PyScaffold-005CA0?logo=pyscaffold
     :alt: Project generated with PyScaffold
@@ -30,7 +30,7 @@
 |
 
 ==========
-python-sdk
+agentflare-sdk
 ==========
 
 

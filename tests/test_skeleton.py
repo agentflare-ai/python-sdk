@@ -1,6 +1,6 @@
 import pytest
 
-from python_sdk.skeleton import fib, main
+from agentflare_sdk.skeleton import fib, main
 
 __author__ = "Justin Merrell"
 __copyright__ = "Justin Merrell"

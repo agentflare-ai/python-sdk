@@ -1,5 +1,5 @@
 """
-    Setup file for python-sdk.
+    Setup file for agentflare-sdk.
     Use setup.cfg to configure your project.
 
     This file was generated with PyScaffold 4.6.

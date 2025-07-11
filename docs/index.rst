@@ -1,8 +1,8 @@
 ==========
-python-sdk
+agentflare-sdk
 ==========
 
-This is the documentation of **python-sdk**.
+This is the documentation of **agentflare-sdk**.
 
 .. note::
 

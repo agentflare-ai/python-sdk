@@ -36,34 +36,13 @@ jobs:
           name: python-package-distributions
           path: dist/
 
-  publish-to-pypi:
-    name: Publish to PyPI
-    needs: build
-    if: |
-      github.event_name == 'release' ||
-      (github.event_name == 'workflow_dispatch' && github.event.inputs.publish_to == 'pypi')
-    runs-on: ubuntu-latest
-    environment:
-      name: pypi
-      url: https://pypi.org/p/agentflare-sdk
-    permissions:
-      id-token: write # Required for trusted publishing
-
-    steps:
-      - name: Download distributions
-        uses: actions/download-artifact@v4
-        with:
-          name: python-package-distributions
-          path: dist/
-      - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-
   publish-to-testpypi:
     name: Publish to TestPyPI
     needs: build
     if: |
-      github.event_name == 'workflow_dispatch' &&
-      (github.event.inputs.publish_to == 'testpypi' || github.event.inputs.publish_to == '')
+      github.event_name == 'release' ||
+      (github.event_name == 'workflow_dispatch' &&
+      (github.event.inputs.publish_to == 'testpypi' || github.event.inputs.publish_to == ''))
     runs-on: ubuntu-latest
     environment:
       name: testpypi
@@ -81,3 +60,25 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
+
+  publish-to-pypi:
+    name: Publish to PyPI
+    needs: [build, publish-to-testpypi] # Ensures TestPyPI publish happens first on release
+    if: |
+      github.event_name == 'release' ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.publish_to == 'pypi')
+    runs-on: ubuntu-latest
+    # environment:  # Commented out: Uncomment and configure in repo settings for manual approval
+    #   name: pypi
+    #   url: https://pypi.org/p/agentflare-sdk
+    permissions:
+      id-token: write # Required for trusted publishing
+
+    steps:
+      - name: Download distributions
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
